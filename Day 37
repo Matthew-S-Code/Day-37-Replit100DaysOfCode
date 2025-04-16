@@ -1,0 +1,32 @@
+# here is my 1st attempt
+
+print("STAR WARS NAME GENERATOR")
+print()
+
+fName = input("First name: ").strip().capitalize()
+lName = input("Last name: ").strip().capitalize()
+mMName = input("Mothers maiden name: ").strip().capitalize()  
+bCity = input("The name of the City you were born: ").strip().capitalize()
+
+newFName = f"{fName[0:3]}{lName[0:2]}"
+newLName = f"{mMName[0:2]}{bCity[-3:]}"
+print()
+print(f"Your STAR WARS NAME is: {newFName} {newLName}!"
+
+# here is my refined code
+
+print("STAR WARS NAME GENERATOR")
+print()
+
+allIn = input("Enter your first name, last name,\nMum's maiden name and the city you were born in: ").split()
+
+fName = allIn[0].strip()
+lName = allIn[1].strip()
+maiden = allIn[2].strip()
+bCity = allIn[3].strip()
+
+newName = f"{fName[0:3].title()}{lName[0:2].lower()} {maiden[0:2].title()}{bCity[-3:].lower()}"
+
+
+print()
+print(f"Your STAR WARS NAME is: {newName}!")
